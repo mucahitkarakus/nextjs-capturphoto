@@ -4,6 +4,7 @@ import {Inter} from "@next/font/google";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import {SliderData} from "../components/SliderData";
+import Instagram from "../components/Instagram";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -21,6 +22,7 @@ export default function Home() {
         message="I Capture moments in nature and keep them alive."
       />
       <Slider slides={SliderData} />
+      <Instagram />
     </>
   );
 }
