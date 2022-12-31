@@ -9,10 +9,10 @@ import InstagramImg from "./InstagramImg";
 
 const Instagram = () => {
   return (
-    <div>
-      <p>Fallow me on Instagram</p>
-      <p>@Mcahtkarakus</p>
-      <div>
+    <div className="max-w-[1240px] mx-auto py-24">
+      <p className="text-2xl font-bold">Fallow me on Instagram</p>
+      <p className="pb-4">@Mcahtkarakus</p>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4">
         <InstagramImg socialImg={IgImg1} />
       </div>
     </div>
