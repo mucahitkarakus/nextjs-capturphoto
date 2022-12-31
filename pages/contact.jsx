@@ -7,7 +7,7 @@ const contact = () => {
     <div>
       <Hero
         heading="Contact"
-        message="Submit the form below for more work and quotes."
+        message="Submit the form below for more work and quotes. "
       />
       <Contact />
     </div>
