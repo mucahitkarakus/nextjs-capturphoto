@@ -17,9 +17,9 @@ const Slider = ({slides}) => {
     return null;
   }
   return (
-    <div id="gallery">
-      <h1>Gallery</h1>
-      <div>
+    <div id="gallery" className="max-w-[1240px] mx-auto">
+      <h1 className="text-2xl font-bold text-center">Gallery</h1>
+      <div className="relative flex justify-center p-4">
         {SliderData.map((slide, index) => {
           return (
             <div
@@ -30,21 +30,19 @@ const Slider = ({slides}) => {
                   : "opacity-0"
               }
             >
-              <div className="relative flex justify-center p-4">
-                <FaArrowCircleLeft
-                  onClick={prevSlide}
-                  className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]"
-                  size={50}
-                />
-                {index === current && (
-                  <Image src={slide.image} alt="/" width="1440" height="600" />
-                )}
-                <FaArrowCircleRight
-                  onClick={nextSlide}
-                  className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]"
-                  size={50}
-                />
-              </div>
+              <FaArrowCircleLeft
+                onClick={prevSlide}
+                className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]"
+                size={50}
+              />
+              {index === current && (
+                <Image src={slide.image} alt="/" width="1440" height="600" />
+              )}
+              <FaArrowCircleRight
+                onClick={nextSlide}
+                className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]"
+                size={50}
+              />
             </div>
           );
         })}
